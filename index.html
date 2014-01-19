@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>stars</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href=""/>
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('input[type=submit]').click(function() {
+        $('p').html('<span class="stars">'+parseFloat($('input[name=amount]').val())+'</span>');
+        $('span.stars').stars();
+      });
+      $('input[type=submit]').click();
+    });
+
+    $.fn.stars = function() {
+      return $(this).each(function() {
+        $(this).html($('<span />').width(Math.max(0, (Math.min(5, parseFloat($(this).html())))) * 16));
+      });
+    }
+  </script>
+</head>
+<body>
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>
+<table>
+  <tr><th>PDF Tool</th><th>Was I able to install or run this?</th><tH>Notes</th></tr>
+  <tr><td>Tabula</td><td><span class="stars"><span style="width: 80px;"></span></span><td>Easy Mac install from <a href="http://tabula.nerdpower.org">http://tabula.nerdpower.org</a></td>
+  </td></tr>
+  <tr><td>ABBY API bash script</td><td><span class="stars"><span style="width: 80px;"></span></span>
+  </td><td>./curl_recognize.sh N00029139_2012.pdf N00029139_2012.rtf -rtf</td></tr>
+  <tr><td>DocHive</td><td><span class="stars"><span style="width: 0px;"></span></td></tr>
+
+</table>
+</p>
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+<!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
+<!--<script src="pdf-liberation-docs-stars.js"></script>-->
+
+
+</body>
+</html>
