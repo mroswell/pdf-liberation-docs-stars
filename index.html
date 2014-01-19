@@ -12,16 +12,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href=""/>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
   <script type="text/javascript">
-    $(function() {
-      $('input[type=submit]').click(function() {
-        $('p').html('<span class="stars">'+parseFloat($('input[name=amount]').val())+'</span>');
-        $('span.stars').stars();
-      });
-      $('input[type=submit]').click();
-    });
 
     $.fn.stars = function() {
       return $(this).each(function() {
@@ -36,18 +37,23 @@
 <![endif]-->
 
 <!-- Add your site or application content here -->
-<p>
-<table>
-  <tr><th>PDF Tool</th><th>Was I able to install or run this?</th><tH>Notes</th></tr>
+<div>
+<p>My biased views on the usability of various PDF Liberation Tools
+<br><a href="http://mroswell.github.io/pdf-liberation-docs-stars/">http://mroswell.github.io/pdf-liberation-docs-stars/</a>
+</p>
 
-  <tr><td>ABBYY API bash script</td><td><span class="stars"><span style="width: 80px;"></span></span>
+<table  class="table table-striped">
+  <tr><th>PDF Tool</th><th>Installation Ease</th><tH>Notes</th></tr>
+
+  <tr><td>ABBYY Cloud OCR SDK - bash script</td><td><span class="stars"><span style="width: 80px;"></span></span>
   </td><td>Create application. Update script with ID and password. run: ./curl_recognize.sh N00029139_2012.pdf N00029139_2012.rtf -rtf</td></tr>
-  <tr><td>DocHive</td><td><span class="stars"><span style="width: 0px;"></span></td><td>Not sure how to update batch files to run on a MAC</td></tr>
+  <tr><td>DocHive</td><td><span class="stars"><span style="width: 0px;"></span></td><td>Not sure how to update batch files to run on a Mac. Will await Rails version.</td></tr>
   <tr><td>Tabula</td><td><span class="stars"><span style="width: 80px;"></span></span><td>Easy Mac install from <a href="http://tabula.nerdpower.org">http://tabula.nerdpower.org</a></td>
-    </td></tr>
+</tr>
+  <tr><td>What Word Where</td><td><span class="stars"><span style="width: 0px;"></span></span></td><td>I didn't try to install it, but it looks extremely daunting.</td></tr>
 
 </table>
-</p>
+</div>
 <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>-->
 <!--<script src="pdf-liberation-docs-stars.js"></script>-->
